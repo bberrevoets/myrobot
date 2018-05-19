@@ -4,5 +4,6 @@
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch"/>
   <include file="$(find raspicam_node)/launch/camerav2_410x308_30fps.launch"/>
   <include file="$(find raspi_temperature)/launch/publish_temperature.launch"/>
+  <node pkg="myrobot" type="tf_broadcaster_camera.py" name="tf_camera"/>
   <node pkg="turtlebot3_bringup" type="turtlebot3_diagnostics" name="turtlebot3_diagnostics" output="screen" />
 </launch>
