@@ -172,6 +172,8 @@ void msgPub()
     tb3_diagnostics.status.push_back( LDS_state );
     tb3_diagnostics.status.push_back( battery_state );
     tb3_diagnostics.status.push_back( button_state );
+    tb3_diagnostics.status.push_back( temperatur_state );
+    tb3_diagnostics.status.push_back( camera_state );
 
     tb3_diagnostics_pub.publish( tb3_diagnostics );
 }
