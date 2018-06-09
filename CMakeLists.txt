@@ -7,7 +7,7 @@ project(myrobot)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy diagnostic_msgs sensor_msgs raspi_temperature turtlebot3_msgs)
+find_package(catkin REQUIRED COMPONENTS roscpp rospy diagnostic_msgs sensor_msgs raspi_temperature turtlebot3_msgs tf)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -201,5 +201,13 @@ add_executable(myrobot_diagnostics
 )
 add_dependencies(myrobot_diagnostics ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(myrobot_diagnostics
+  ${catkin_LIBRARIES}
+)
+
+add_executable(tf_broadcaster_camera
+  src/tf_broadcaster_camera.cpp
+)
+add_dependencies(tf_broadcaster_camera ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(tf_broadcaster_camera
   ${catkin_LIBRARIES}
 )
