@@ -13,9 +13,9 @@ int main( int argc, char* argv[] )
 
     while ( nh.ok() )
     {
-        transform.setOrigin( tf::Vector3( 0.05, 0.0, 0.15 ) );
+        transform.setOrigin( tf::Vector3( 0.05, 0.0, -0.15 ) );
         transform.setRotation( tf::Quaternion( 0, 0, 0, 1 ) );
-        br.sendTransform( tf::StampedTransform( transform, ros::Time::now(), "raspicam", "base_link" ) );
+        br.sendTransform( tf::StampedTransform( transform, ros::Time::now(), "raspicam", "odom" ) );
 
         rate.sleep();
     }

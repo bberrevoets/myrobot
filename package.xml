@@ -16,21 +16,24 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>raspi_temperature</build_depend>
   <build_depend>turtlebot3_msgs</build_depend>
+  <build_depend>tf</build_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>diagnostic_msgs</build_export_depend>
   <build_export_depend>sensor_msgs</build_export_depend>
   <build_export_depend>raspi_temperature</build_export_depend>
   <build_export_depend>turtlebot3_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
   <exec_depend>rospy</exec_depend> 
   <exec_depend>roscpp</exec_depend>
   <exec_depend>diagnostic_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>raspi_temperature</exec_depend>
   <exec_depend>turtlebot3_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
   <export>
   </export>
-<build_depend>tf</build_depend>
-<build_export_depend>tf</build_export_depend>
-<exec_depend>tf</exec_depend>
+<build_depend>message_generation</build_depend>
+<build_export_depend>message_generation</build_export_depend>
+<exec_depend>message_runtime</exec_depend>
 </package>
